@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div align="center" class="mt-5">
+    <form action="/login" method="POST" class="col-6">
+        <!-- Title -->
+        <h2 align="center" class="my-3">Login</h2>
+
+        <!-- Email Address -->
+        <div class="mb-3">
+            <label for="email" class="form-label float-start">Email address</label>
+            <input type="email" 
+                name="email" 
+                value="{{ email if email }}"
+                class="form-control shadow-none" 
+                id="email" 
+                placeholder="Enter email" />
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+            <label for="password1" class="form-label float-start">Password</label>
+            <input type="password" 
+                name="password1" 
+                class="form-control shadow-none" 
+                id="password1"
+                placeholder="Enter password" />
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-secondary shadow-none">Submit</button>
+    </form>
+</div>
+{% endblock %}

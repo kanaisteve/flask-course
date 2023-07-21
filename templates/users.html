@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<h2 class="mt-5">User List</h2>
+<ul>
+    {% for user in users %}
+    <li><b>Name:</b> {{ user.username }}, <b>Email:</b> {{ user.email }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

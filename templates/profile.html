@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div align="center" class="mt-5">
+    <form action="/profile" method="POST" class="col-6">
+        <!-- Title -->
+        <h2 align="center" class="my-3">Profile</h2>
+        
+        <!-- Username -->
+        <div class="mb-3">
+            <label for="username" class="form-label float-start">Username</label>
+            <input type="text" 
+                name="username" 
+                value="{{ username if username }}"
+                class="form-control shadow-none" 
+                id="username"
+                placeholder="Enter username" />
+        </div>
+
+        <!-- Email Address -->
+        <div class="mb-3">
+            <label for="email" class="form-label float-start">Email address</label>
+            <input type="email" 
+                name="email" 
+                value="{{ email if email }}"
+                class="form-control shadow-none" 
+                id="email" 
+                placeholder="Enter email" />
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-secondary shadow-none">Update</button>
+    </form>
+</div>
+{% endblock %}
