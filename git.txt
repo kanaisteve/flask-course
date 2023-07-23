@@ -14,3 +14,15 @@ git push -u origin main
 git remote add origin git@github.com:kanaisteve/flask-course.git
 git branch -M main
 git push -u origin main
+
+Upload codebase to a different branch
+-------------------------------------
+git branch
+git branch v1.0
+git checkout v1.0
+git push -u origin v1.0
+
+Merge Branches
+--------------
+git checkout main
+git merge v1.0
